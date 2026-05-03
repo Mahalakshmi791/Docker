@@ -2,7 +2,7 @@ FROM node:20-alpine3.22 AS builder
 LABEL tier="backend"
 WORKDIR /app
 COPY . .
-RUN npm ci
+RUN npm install
 
 FROM node:20-alpine3.22
 WORKDIR /app
